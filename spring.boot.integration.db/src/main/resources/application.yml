@@ -1,0 +1,21 @@
+spring:
+  profiles.active: default
+---
+spring:
+  profiles: default
+spring.datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/myappdb?autoReconnect=true
+  username: root
+  password: root
+management:
+  security:
+    enabled: true
+    role: ADMIN
+---
+spring:
+  profiles: qa
+spring.datasource:
+  url: jdbc:mysql://qa.myapp.com:3306/myappdb?autoReconnect=true
+  username: qauser
+  password: qapassword
