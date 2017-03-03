@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-boot-cassandra
+cassandra:
+  host: 127.0.0.1:9042,127.0.0.2:9042,127.0.0.3:9042
+  cluster:
+    name: test
+    user: root
+    password: root
+    pooling:
+      minThread: 5
+      maxThread: 10
+      timeout: 5000
+  keyspaces:
+    keyspace:
+      name: test_cassandra
