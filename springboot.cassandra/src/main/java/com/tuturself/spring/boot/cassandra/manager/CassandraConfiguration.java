@@ -44,14 +44,14 @@ public class CassandraConfiguration {
 	private String password;
 
 	@Bean(destroyMethod = "shutDown")
-	public ManagerFactory cassandraNativeClusterProduction() {
+	public ManagerFactory configureManagerFactory() {
 
 		PoolingOptions poolingOptions = new PoolingOptions();
 		poolingOptions.setMaxConnectionsPerHost(HostDistance.LOCAL, maxThread);
 		poolingOptions.setPoolTimeoutMillis(timeout);
 		poolingOptions.setCoreConnectionsPerHost(HostDistance.LOCAL, maxThread);
 		PlainTextAuthProvider authProvider = new PlainTextAuthProvider(userName, password);
-		Cluster cluster = Cluster.builder().addContactPointsWithPorts(convertToInternetAddress())
+		Cluster cluster = Cluster.builder().addContactPointsWithPorts(getIpAddressList())
 				.withClusterName(clusterName).withAuthProvider(authProvider).withPoolingOptions(poolingOptions).build();
 		final ManagerFactory factory = ManagerFactoryBuilder
                 .builder(cluster).doForceSchemaCreation(true).withDefaultKeyspaceName(keyspace)
@@ -59,17 +59,14 @@ public class CassandraConfiguration {
 		return factory;
 	}
 
-	private List<InetSocketAddress> convertToInternetAddress() {
+	private List<InetSocketAddress> getIpAddressList() {
 
 		List<InetSocketAddress> cassandraHosts = Lists.newArrayList();
-
 		for (String host : cassandraHost.split(",")) {
-
 			InetSocketAddress socketAddress = new InetSocketAddress(host.split(":")[0],
 					Integer.valueOf(host.split(":")[1]));
 			cassandraHosts.add(socketAddress);
 		}
-
 		return cassandraHosts;
 	}
 }
