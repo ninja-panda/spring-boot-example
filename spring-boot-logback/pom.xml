@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tuturself</groupId>
 	<artifactId>spring-boot-logback</artifactId>
-	<version>${application.version}-${SNAPSHOT}</version>
+	<version>${application.version}-${release.number}</version>
 	<name>spring-boot-logback</name>
 	
 	 <properties>

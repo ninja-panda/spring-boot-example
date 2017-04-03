@@ -1,6 +1,3 @@
-spring:
-  application:
-    name: tuturself-logback
 logging:
   level:
     org.springframework.web: ERROR

@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StudentSearchApplication {
 	
 	private final static Logger logger = LoggerFactory.getLogger(StudentSearchApplication.class);
-
+	
 	public static void main(String[] args) throws Exception {
 		logger.debug("StudentSearchApplication STARTing...");
 		SpringApplication.run(StudentSearchApplication.class, args);
