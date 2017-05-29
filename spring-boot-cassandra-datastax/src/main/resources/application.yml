@@ -7,7 +7,7 @@ server:
 cassandra:
   host: 127.0.0.1:9042
   cluster:
-    name: qualys
+    name: test
     username: cassandra
     password: cassandra
   keyspace:
