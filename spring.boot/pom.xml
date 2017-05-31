@@ -5,7 +5,10 @@
 	<groupId>com.tuturself</groupId>
 	<artifactId>spring.boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>../spring.boot.filter</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
