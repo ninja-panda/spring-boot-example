@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-boot-consul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: spring-boot-consul
+        enabled: true
+      config:
+        enabled: true
+        format: files
+        fail-fast: true
+server:
+  servlet:
+    contextPath: /spring-boot-consul
+logging:
+  level:
+    ROOT: DEBUG
