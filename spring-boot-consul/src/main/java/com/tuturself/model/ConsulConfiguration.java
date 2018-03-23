@@ -31,4 +31,18 @@ public class ConsulConfiguration {
 
     @Value("${cassandra.keyspace.writeConsistency}")
     private String writeConsistency;
+
+    @Override
+    public String toString() {
+        return "ConsulConfiguration{" +
+                "cassandraHost='" + cassandraHost + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", maxThread=" + maxThread +
+                ", timeout=" + timeout +
+                ", keyspace='" + keyspace + '\'' +
+                ", readConsistency='" + readConsistency + '\'' +
+                ", writeConsistency='" + writeConsistency + '\'' +
+                '}';
+    }
 }

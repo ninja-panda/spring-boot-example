@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-@Api(value = "Consul Configuration APIs",
-        description = "Rest APIs for Spring Boot Consul API",
+@Api(value = "Read Consul Configurations API",
+        description = "Rest APIs for Spring Boot 2 Consul API",
         produces = "application/json")
 public class RestApi {
 
     @Autowired
     private ConsulConfiguration consulConfiguration;
 
-    @RequestMapping(value = "/consulConfig", method = RequestMethod.GET)
+    @RequestMapping(value = "/readConsulConfig", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     public ResponseEntity<String> readConsulConfiguration() {
         return new ResponseEntity<String>(consulConfiguration.toString(), HttpStatus.OK);
