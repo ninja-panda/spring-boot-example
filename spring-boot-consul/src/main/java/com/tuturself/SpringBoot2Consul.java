@@ -14,12 +14,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class SpringBoot2Consul {
 
     public static void main(String[] args) {
-        System.out.println("Application is Starting...");
+        System.out.println("SpringBoot2Consul Application is Starting...");
         try {
             SpringApplication.run(SpringBoot2Consul.class, args);
         } catch (Exception e) {
-            System.out.println("Error occurred while starting");
+            System.out.println("Error occurred while starting SpringBoot2Consul");
         }
-        System.out.println("Application Started..");
+        System.out.println("SpringBoot2Consul Application Started..");
     }
 }
