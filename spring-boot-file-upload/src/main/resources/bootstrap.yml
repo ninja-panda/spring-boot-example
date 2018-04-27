@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-boot-file-upload
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: spring-boot-file-upload
+        enabled: true
+      config:
+        enabled: true
+        format: files
+        fail-fast: true
