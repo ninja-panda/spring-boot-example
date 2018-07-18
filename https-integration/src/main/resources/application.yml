@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-test-service
+
+server:
+  port: 8443
+  http-port: 8099
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: test@123
+    keyStoreType: PKCS12
+    keyAlias: https-integration
+
+logging:
+  level:
+    org.springframework: INFO
+    com.qualys: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: /tmp/logs/https-integration-application.log
