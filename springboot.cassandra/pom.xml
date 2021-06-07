@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cassandra.driver>3.1.0</cassandra.driver>
 		<lombok.version>1.16.8</lombok.version>
-		<logback.version>1.1.7</logback.version>
+		<logback.version>1.2.0</logback.version>
 		<spring.version>4.3.5.RELEASE</spring.version>
 		<achilles.version>5.1.0</achilles.version>
 	</properties>
